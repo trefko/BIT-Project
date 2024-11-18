@@ -52,9 +52,22 @@ back.addEventListener("click", () => {
 });
 
 const search = document.querySelector(".search");
-search.addEventListener("keyup", () => {
-  getOption(search.value);
-});
+search.addEventListener(
+  "keyup",
+  debounce(() => {
+    getOption(search.value);
+  })
+);
+
+function debounce(func, timeout = 700) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  };
+}
 
 window.addEventListener("load", () => {
   const getInfo = JSON.parse(localStorage.getItem("show"));
