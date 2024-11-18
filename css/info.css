@@ -1,0 +1,76 @@
+.img {
+  width: 70%;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  justify-self: center;
+  flex-wrap: wrap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+}
+
+body > h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: grey;
+  margin-bottom: 70px;
+}
+
+.head > div {
+  margin-right: 200px;
+}
+
+.head > h3 {
+  color: white;
+  font-size: 30px;
+  margin-left: 200px;
+}
+
+.container > p {
+  width: 25%;
+  height: 40px;
+}
+
+.info {
+  font-size: 20px;
+}
+
+.head > h3:hover {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "bit";
+  src: url("./Clouts!.ttf");
+}
+
+.head {
+  font-family: "bit";
+}
+
+.result {
+  width: 200px;
+  position: absolute;
+}
+
+.result > p {
+  background-color: aliceblue;
+  margin: 0;
+}
+.result > p:hover {
+  background-color: grey;
+  margin: 0;
+}
